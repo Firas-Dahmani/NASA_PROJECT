@@ -4,6 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "install-server":"npm install --prefix Server",
+    "install-client":"npm install --prefix Client",
+    "install": "npm run install-server && npm run install-client",
+    "server": "npm run watch --prefix Server",
+    "client": "npm start --prefix Client",
+    "watch": "concurrently \"npm run client\" \"npm run server\"",
+    "deploy": "npm run build --prefix Client && npm start --prefix Server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Firas-Dahmani/NASA_PROJECT/issues"
   },
-  "homepage": "https://github.com/Firas-Dahmani/NASA_PROJECT#readme"
+  "homepage": "https://github.com/Firas-Dahmani/NASA_PROJECT#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
 }
