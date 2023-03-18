@@ -9,10 +9,10 @@
     "install": "npm run install-server && npm run install-client",
     "server": "npm run watch --prefix Server",
     "client": "npm start --prefix Client",
-    "watch": "concurrently \"npm run client\" \"npm run server\"",
+    "watch": "concurrently \"npm run Client\" \"npm run Server\"",
     "deploy": "npm run build --prefix Client && npm start --prefix Server",
     "deploy-cluster": "npm run build --prefix Client && npm run cluster --prefix Server",
-    "test": "npm test --prefix server && npm test --prefix client"
+    "test": "npm test --prefix Server && npm test --prefix Client"
   },
   "repository": {
     "type": "git",
